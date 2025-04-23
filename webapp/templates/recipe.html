@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/recipe.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Your Recipe</h1>
+        <div class="card mt-4">
+            <img src="{{ recipe.image.url }}" class="card-img-top" alt="Uploaded Image">
+            <div class="card-body">
+                <h5 class="card-title">Ingredients:</h5>
+                <p class="card-text">{{ recipe.ingredients }}</p>
+                <h5 class="card-title">Recipe:</h5>
+                <p class="card-text">{{ recipe.recipe }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
