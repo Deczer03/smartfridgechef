@@ -66,3 +66,4 @@ def get_recipe_details(recipe_id, api_key):
         data = response.json()
         return data.get("instructions", "No instructions available.")
     return "Failed to fetch recipe details."
+#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
